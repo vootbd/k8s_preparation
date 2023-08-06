@@ -1,0 +1,54 @@
+etcd backup and restore
+
+For backup
+
+Step 1
+First find the staticpod directory.
+
+By default the location is 
+/etc/kubernetes/manifests/
+
+Step 2
+There find the yaml config file for etcd which is by default
+etcd.yaml
+
+read the file etcd.yaml and fine the details of the following certificates
+
+cacert = /etc/kubernetes/pki/etcd/ca.crt
+cert = /etc/kubernetes/pki/etcd/server.crt
+key = /etc/kubernetes/pki/etcd/server.key
+
+Step 3
+Following is the command to save the spanshot of etcd
+
+sudo ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
+--cacert=/etc/kubernetes/pki/etcd/ca.crt \
+--cert=/etc/kubernetes/pki/etcd/server.crt \
+--key=/etc/kubernetes/pki/etcd/server.key \
+snapshot save snapshot.db
+
+
+For restore
+
+Step 4
+
+Create a data restore directory in here
+/var/lib/etcd-backup
+
+Step 5
+
+sudo ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
+--cacert=/etc/kubernetes/pki/etcd/ca.crt \ 
+--cert=/etc/kubernetes/pki/etcd/server.crt \
+--key=/etc/kubernetes/pki/etcd/server.key \
+--data-dir=/var/lib/etcd-backup
+snapshot save snapshot.db
+
+A special note is to use the absolute to the backup here snapshot.db
+
+Step 6
+  
+Now edit the the data dir in the etcd.yaml config file in three locations
+
+
+
