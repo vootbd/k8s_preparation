@@ -34,5 +34,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 
 
-
+Addtional URL
+https://v1-26.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+https://v1-26.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/upgrading-linux-nodes/
 
