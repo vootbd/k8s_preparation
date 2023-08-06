@@ -1,0 +1,38 @@
+Upgrade nodes
+
+Step 1
+
+apt update
+
+Step 2
+
+apt-mark unhold kubeadm &&\
+apt-get update && apt-get install -y kubeadm=1.26.0-00 &&\
+apt-mark hold kubeadm
+
+Step 3
+
+kubeadm version
+
+kubeadm upgrade plan
+
+sudo kubeadm upgrade apply v1.26.0
+
+Step 4
+
+kubectl cordon node01
+kubectl drain node01 --ignore-daemonsets
+
+Step 5
+
+apt-mark unhold kubelet kubectl &&\
+apt-get update && apt-get install -y kubelet=1.26.0-00 kubectl=1.26.0-00 &&\
+apt-mark hold kubelet kubectl
+
+
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
+
+
+
