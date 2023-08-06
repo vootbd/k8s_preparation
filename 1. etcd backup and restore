@@ -51,4 +51,11 @@ Step 6
 Now edit the the data dir in the etcd.yaml config file in three locations
 
 
+Additional resources
+how to backup and restore etcd in kubernetes cluster
+https://www.youtube.com/watch?v=_6BMGnnySrc
+
+
+kubernetes documentation
+https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
 
