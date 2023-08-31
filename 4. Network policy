@@ -1,0 +1,32 @@
+ kubectl create ns frontend
+ kubectl label namespaces frontend role=frontend
+ kubectl run web --image=nginx --labels=app=web --port 80 -n frontend
+ kubectl expose pod web --type=ClusterIP --port=80 -n frontend
+
+ kubectl create ns backend
+ kubectl label namespaces backend role=backend
+ kubectl run api --image=nginx --labels=app=api --port 80 -n backend
+ kubectl expose pod api --type=ClusterIP --port=80 -n backend
+
+
+ kubectl create ns admin
+ kubectl label namespaces admin role=admin
+ kubectl run admin --image=nginx --labels=app=admin --port 80 -n admin
+ kubectl expose pod admin --type=ClusterIP --port=80 -n admin
+
+
+ kubectl create ns test
+ kubectl run test --image=nginx --labels=app=test --port 80 -n test
+ kubectl expose pod test --type=ClusterIP --port=80 -n test
+
+
+ kubectl exec -it web -n frontend -- curl api.backend
+ kubectl exec -it web -n frontend -- curl admin.admin
+ kubectl exec -it admin -n admin -- curl web.frontend
+ kubectl exec -it admin -n admin -- curl api.backend
+ kubectl exec -it api -n backend -- curl web.frontend
+ kubectl exec -it api -n backend -- curl admin.admin
+
+kubectl exec -it test -n test -- curl api.backend
+kubectl exec -it test -n test -- curl admin.admin
+kubectl exec -it test -n test -- curl web.frontend
