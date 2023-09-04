@@ -1,4 +1,4 @@
-## Kubernater Exam preparation : CKA 
+# Kubernater Exam preparation : CKA 
 
 Preparing myself for CKA exam
 
