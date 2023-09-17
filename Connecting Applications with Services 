@@ -1,0 +1,37 @@
+related URL
+https://kubernetes.io/docs/tutorials/services/connect-applications-service/
+
+Exposing pods to the cluster 
+Create an nginx Pod, and note that it has a container port specification:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx
+spec:
+  selector:
+    matchLabels:
+      run: my-nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-nginx
+    spec:
+      containers:
+      - name: my-nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+
+This makes it accessible from any node in your cluster. Check the nodes the Pod is running on:
+
+kubectl apply -f ./run-my-nginx.yaml
+kubectl get pods -l run=my-nginx -o wide
+
+Creating a Service 
+
+You can create a Service for your 2 nginx replicas with kubectl expose:
+
+kubectl expose deployment/my-nginx
