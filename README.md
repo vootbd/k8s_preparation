@@ -31,6 +31,7 @@ This git repo it to log my preparation what I am learning, from where i am learn
 - https://github.com/kubernetes/kubectl/issues/1137
 - https://github.com/ahmetb/kubernetes-network-policy-recipes
 - https://github.com/warolv/cka-series/blob/master/network-policy.md
+- https://github.com/StenlyTU/K8s-training-official
 
 ## Here's a list of *Stackoverflow* links I found useful:
 
