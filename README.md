@@ -15,7 +15,6 @@ This git repo it to log my preparation what I am learning, from where i am learn
 - https://github.com/leandrocostam/cka-preparation-guide
 - https://github.com/mgonzalezo/CKA-Preparation
 - https://gist.github.com/texasdave2/8f4ce19a467180b6e3a02d7be0c765e7
-- https://github.com/kubernetes/
 - https://github.com/kubernetes/kubectl/issues/1137
 - https://github.com/ahmetb/kubernetes-network-policy-recipes
 - https://github.com/warolv/cka-series/blob/master/network-policy.md
