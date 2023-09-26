@@ -19,11 +19,13 @@ This git repo it to log my preparation what I am learning, from where i am learn
 - https://github.com/ahmetb/kubernetes-network-policy-recipes
 - https://github.com/warolv/cka-series/blob/master/network-policy.md
 - https://github.com/StenlyTU/K8s-training-official
+- https://github.com/g3rzi/CKA
 
 ## Here's a list of *Stackoverflow* links I found useful:
 
 - https://stackoverflow.com/questions/74271703/cka-network-policy-question-for-ingress-traffic
 - https://stackoverflow.com/questions/74786524/how-to-use-network-policy-to-allow-access-to-pods-only-from-a-specific-namespace
+- https://stackoverflow.com/questions/49981601/difference-between-targetport-and-port-in-kubernetes-service-definition
 
 ## Here's a list of *YouTube* links I found useful:
 
