@@ -1,0 +1,21 @@
+Types of questions
+
+1. Etcd backup and restore
+2. upgrade cluster to 1.2X.X
+3. RBAC: clusterrole, clusterrolebindings, role, rolebindings, service account
+4. Nodes in ready state and taint 
+5. Find pods that is consuming most CPU or Memory
+6. Add a sidecar container to get logs from primary container
+7. Create a PVC to bound with a PV and decrease/increase it to a limit and record 
+8. Create a pod with details
+9 create a deployment with details and sclae it to s replica number and record
+10. create a pod and manually schedule it with NodeSeclector
+11. Nodeaffinity schedule a pod to the master node without changing the labels
+12. create a network policy to that allow all pods in X namespace to reach to all pods in Y namespace in a port (80, 8080)
+13 Worker node not ready troubleshoot to bring it to ready state
+14. create pod with recource and limits
+15. create a pod with security context : user_id, group_id, sys_admin, net_admin
+16. get label of pods and sort those pods with label and write them to a file
+17. mount a secret or a configmap
+18. create a pod with an environment variable
+19. init container or create a secondary pod and sleep for a time
