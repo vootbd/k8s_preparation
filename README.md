@@ -31,6 +31,10 @@ This git repo it to log my preparation what I am learning, from where i am learn
 
 - https://www.youtube.com/watch?v=zseW7ehtPlo
 - https://www.youtube.com/watch?v=SzkpbDOJ20U
+- https://www.youtube.com/watch?v=e-vxYtSFOns&t=1959s
+
+## Killercoda links I found useful:
+- https://killercoda.com/killer-shell-cka
 
 ## Other links
 
